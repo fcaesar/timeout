@@ -1,0 +1,13 @@
+<input id="numInput"></input>
+<script type="text/javascript">
+    ms = 1000; // 1000 ?
+    num = 1;
+    function test()
+    {
+        num+=ms;
+        document.getElementById('numInput').value = num; // Using native Javascript on purpose
+        if (num < ms * 10)
+            window.setTimeout(test, ms);
+    }
+    test()
+</script>
